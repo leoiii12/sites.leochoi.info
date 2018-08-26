@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CHOI GAIN'S WEBSITE - Mine</title>
+    <link href="./Content/favicon.ico" rel="shortcut icon" />
+    <link href="./Content/Site.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+        <script>
+        window.onload = function (){
+            alert("你的瀏覽器不支援這網頁，大部分視覺效果會失去，請使用 IE9 或以上的瀏覽器！");
+        }
+        </script>
+    <![endif]-->
+
+</head>
+<body>
+    <h1 id="head-text">CHOI GAIN'S Website</h1>
+    <nav id="main-nav">
+        <a href="./index.html">Home</a>
+        <a href="./introduction.html">Introduction</a>
+        <a href="./photography.html">Photography</a>
+        <a href="./thinking.html">Thinking</a>
+        <a href="./mine.html">Mine</a>
+        <a href="./boardcast.html">Boardcast</a>
+    </nav>
+    <article id="main-article">
+        <div id="page">
+            <div id="page-content">
+                <section>
+                    <h3>我對自己說的話</h3>
+                    <p>我以往曾經幫學校製作網站，但係每次都半途而廢，每天都在玩 LOL，但我又不是玩得特別好。</p>
+                    <p>我雖然做不好學校網，但我希望我未來可以做好這個網站，將玩電腦的時間減少，我希望會做到。</p>
+                    <p>我特別做這一頁出來，就是希望我會記得這個目標，希望我可以用這些歌去記住我的目標。</p>
+                </section>
+                <p>以下這些歌都是我很喜歡的：</p>
+                <section>
+                    <h3>農夫「你的志願」</h3>
+                    <iframe class="videos"></iframe>
+                    <p class="videoDescriptions">我的志願是可以做到一個改變人們的程式設計師，就算改變不到人們，都要可以改變自己。我的父母對我沒有很大的期望，我的爸爸媽媽說，只要不是最尾一個就可以。不用做最好的一個，最緊要是對得住自己。</p>
+                </section>
+                <section>
+                    <h3>小肥「一首歌」</h3>
+                    <iframe class="videos"></iframe>
+                    <p class="videoDescriptions">如果每一個人都可以受到賞識，我相信會出現很多天才。</p>
+                </section>
+                <section>
+                    <h3>農夫「Rap Along Song」</h3>
+                    <iframe class="videos"></iframe>
+                    <p class="videoDescriptions">我不知道怎樣可以描述，但我認為這首歌完完全全可以表達我的心情。</p>
+                </section>
+                <br />
+                如果你有任何歌可以介紹給我聽，你可以填寫以下表格。
+                <form action="mailto:choimankin@gmail.com">
+                    歌曲 :
+                    <input type="text" name="music" />
+                    <input type="submit" />
+                </form>
+            </div>
+        </div>
+    </article>
+    <footer id="footer">
+        <a href="site-map.html" id="sitemap">
+            <img src="Content/shared/footer-sitemap.png" alt="site-map" /></a>
+    </footer>
+    <div id="backtop-center">
+        <div id="backtop">返回頁首</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="./Content/script/detect-mobile-browser.js"></script>
+    <script src="./Content/script/page-script.js"></script>
+    <script>
+        videosResizeEvent();
+        loadVideos(0, "https://www.youtube.com/embed/zgata7akC_g?rel=0");
+        loadVideos(1, "https://www.youtube.com/embed/gr4vQrk5lLE?rel=0");
+        loadVideos(2, "https://www.youtube.com/embed/Csjx2F3r1Sk?rel=0");
+    </script>
+</body>
+</html>

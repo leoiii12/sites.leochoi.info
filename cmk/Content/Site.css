@@ -1,0 +1,114 @@
+﻿body {
+    background-image: url(./shared/body-background.png);
+    border-top: solid 10px #000;
+    font-family: Oswald, sans-serif;
+    margin: 0;
+    min-width: 620px;
+    overflow-y: scroll;
+    padding: 0 10px;
+}
+
+header, footer, nav, section, article {
+    display: block;
+    max-width: 1380px;
+}
+
+#head-text {
+    font-size: 48px;
+    margin: 10px 10px 10px 0;
+}
+
+#main-nav, #main-article {
+    background: #FFF;
+    margin: 0 auto;
+}
+
+#main-nav {
+    box-shadow: 0 0 5px 0 #999;
+    overflow: hidden;
+    padding: 0;
+}
+
+    #main-nav a {
+        border-left: solid 1px #DDD;
+        color: #000;
+        float: right;
+        font-size: 20px;
+        padding: 0 15px;
+        text-decoration: none;
+        text-shadow: 0 0 3px #CCC;
+    }
+
+#main-article {
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    line-height: 26px;
+    margin-bottom: 5px;
+    margin-top: 1px;
+}
+
+    #main-article #page {
+        display: none;
+        padding: 10px;
+    }
+
+        #main-article #page #article-nav a:visited {
+            color: #0e3399;
+        }
+
+        #main-article #page #page-content #galleria {
+            height: 620px;
+        }
+
+        #main-article #page #page-content .illustration {
+            box-shadow: 0 0 5px 0 #999;
+            float: right;
+            margin: 10px 0 10px 25px;
+            min-width: 320px;
+            width: 40%;
+        }
+
+        #main-article #page #page-content footer {
+            font-size: 13px;
+            text-align: right;
+        }
+
+        #main-article #page #page-content .videos {
+            background-color: transparent;
+            border: 0;
+            box-shadow: 0 0 10px 0 #999;
+            float: left;
+            height: 765px;
+            position: relative;
+        }
+
+#backtop-center {
+    left: 50%;
+    margin-left: -10%;
+    position: absolute;
+    z-index: 100;
+}
+
+    #backtop-center #backtop {
+        background: #222;
+        border-radius: 0 0 5px 5px;
+        color: #FFF;
+        cursor: pointer;
+        display: none;
+        padding-bottom: 5px;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        width: 20%;
+    }
+
+#footer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@font-face {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald Regular'), local(Oswald-Regular), url(http://themes.googleusercontent.com/static/fonts/oswald/v7/-g5pDUSRgvxvOl5u-a_WHw.woff) format(woff);
+}

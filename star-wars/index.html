@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+</head>
+<body id="stage">
+    <ui id="initialize">
+        <h1>Star Wars</h1>
+        <p><button id="start-game">START GAME</button></p>
+        <p><button id="settings">SETTINGS</button></p>
+    </ui>
+    <ui id="setting" data-hide="true" data-back="true">
+        <h1>Settings</h1>
+        <p>
+            <label for="number-of-enemies">Number of enemies</label>
+            <select id="number-of-enemies">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+            </select>
+        </p>
+    </ui>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CHOI GAIN'S WEBSITE - Boardcast</title>
+    <link href="./Content/favicon.ico" rel="shortcut icon" />
+    <link href="./Content/Site.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+        <script>
+        window.onload = function (){
+            alert("你的瀏覽器不支援這網頁，大部分視覺效果會失去，請使用 IE9 或以上的瀏覽器！");
+        }
+        </script>
+    <![endif]-->
+
+</head>
+<body>
+    <h1 id="head-text">CHOI GAIN'S Website</h1>
+    <nav id="main-nav">
+        <a href="./index.html">Home</a>
+        <a href="./introduction.html">Introduction</a>
+        <a href="./photography.html">Photography</a>
+        <a href="./thinking.html">Thinking</a>
+        <a href="./mine.html">Mine</a>
+        <a href="./boardcast.html">Boardcast</a>
+    </nav>
+    <article id="main-article">
+        <div id="page">
+            <div id="page-content">
+                <section>
+                    <h3>我的直播</h3>
+                    <object class="videos">
+                        <param name="allowFullScreen" value="true" />
+                        <param name="allowScriptAccess" value="always" />
+                        <param name="allowNetworking" value="all" />
+                        <param name="movie" value="https://zh-tw.twitch.tv/widgets/live_embed_player.swf" />
+                        <param name="flashvars" value="hostname=zh-tw.twitch.tv&channel=leoiii12&auto_play=true&start_volume=25" />
+                    </object>
+                    <p class="videoDescriptions">這是我的直播，有時我可能會在這裡直播我的遊戲實況，希望不要怪我玩得差。</p>
+                </section>
+            </div>
+        </div>
+    </article>
+    <footer id="footer">
+        <a href="site-map.html" id="sitemap">
+            <img src="Content/shared/footer-sitemap.png" alt="site-map" /></a>
+    </footer>
+    <div id="backtop-center">
+        <div id="backtop">返回頁首</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="./Content/script/detect-mobile-browser.js"></script>
+    <script src="./Content/script/page-script.js"></script>
+    <script>
+        videosResizeEvent();
+    </script>
+</body>
+</html>

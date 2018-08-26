@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #experiment {
+            -webkit-perspective: 800px;
+            -webkit-perspective-origin: 50% 200px;
+            -moz-perspective: 800px;
+            -moz-perspective-origin: 50% 200px;
+            perspective: 800px;
+            perspective-origin: 50% 200px;
+        }
+
+        #cube {
+            position: relative;
+            margin: 100px auto;
+            height: 400px;
+            width: 400px;
+            -webkit-transition: -webkit-transform 2s linear;
+            -webkit-transform-style: preserve-3d;
+            -moz-transition: -moz-transform 2s linear;
+            -moz-transform-style: preserve-3d;
+            transition: transform 2s linear;
+            transform-style: preserve-3d;
+        }
+
+        .face {
+            position: absolute;
+            height: 360px;
+            width: 360px;
+            padding: 20px;
+            background-color: rgba(50, 50, 50, 0.7);
+            border: 1px solid #555;
+            border-radius: 3px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #cube .one {
+            -webkit-transform: rotateX(90deg) translateZ(200px);
+            -moz-transform: rotateX(90deg) translateZ(200px);
+            transform: rotateX(90deg) translateZ(200px);
+        }
+
+        #cube .two {
+            -webkit-transform: translateZ(200px);
+            -moz-transform: translateZ(200px);
+            transform: translateZ(200px);
+        }
+
+        #cube .three {
+            -webkit-transform: rotateY(90deg) translateZ(200px);
+            -moz-transform: rotateY(90deg) translateZ(200px);
+            transform: rotateY(90deg) translateZ(200px);
+        }
+
+        #cube .four {
+            -webkit-transform: rotateY(180deg) translateZ(200px);
+            -moz-transform: rotateY(180deg) translateZ(200px);
+            transform: rotateY(180deg) translateZ(200px);
+        }
+
+        #cube .five {
+            -webkit-transform: rotateY(-90deg) translateZ(200px);
+            -moz-transform: rotateY(-90deg) translateZ(200px);
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+
+        #cube .six {
+            -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+            -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+            transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <div id="experiment">
+        <div id="cube">
+            <div class="face one" style="background-image:url(images/1.jpg);"></div>
+            <div class="face two" style="background-image:url(images/2.jpg);"></div>
+            <div class="face three" style="background-image:url(images/3.jpg);"></div>
+            <div class="face four" style="background-image:url(images/4.jpg);"></div>
+            <div class="face five" style="background-image:url(images/5.jpg);"></div>
+            <div class="face six" style="background-image:url(images/6.jpg);"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        var rotate = { x: 0, y: 0 };
+        var originalMouse = { x: 0, y: 0 };
+
+        $("#experiment").mousedown(function (e) {
+            var paused = false;
+            originalMouse = { x: e.clientX, y: e.clientY };
+            $(this).mousemove(function (e) {
+                if (!paused) {
+                    paused = true;
+                    rotate.x -= (e.clientY - originalMouse.y);
+                    rotate.y += (e.clientX - originalMouse.x) * (isReversed(rotate.x) ? -1 : 1);
+                    $("#cube").css("transform", "rotateX(" + rotate.x + "deg) rotateY(" + rotate.y + "deg)");
+                    originalMouse.x = e.clientX;
+                    originalMouse.y = e.clientY;
+                    setTimeout(function () {
+                        paused = false
+                    }, 100);
+                }
+            });
+        });
+
+        function isReversed(xValue) {
+            return (Math.abs(xValue) / 180) % 2 >= 0.5 && (Math.abs(xValue) / 180) % 2 <= 1.5;
+        }
+
+        $(document).mouseup(function () {
+            $("#experiment").off("mousemove");
+        });
+    </script>
+</body>
+</html>

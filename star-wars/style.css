@@ -1,0 +1,15 @@
+﻿body {
+    overflow: hidden;
+    background-image: url('images/space.jpg');
+}
+
+.ufo {
+    position: absolute;
+    background-size: 100%;
+    background-image: url('images/ufo.png');
+}
+
+ui {
+    color: white;
+    text-align: center;
+}
